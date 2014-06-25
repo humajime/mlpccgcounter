@@ -13,14 +13,18 @@
 		66439E81195B5F220080849D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66439E7F195B5F220080849D /* InfoPlist.strings */; };
 		66439E83195B5F220080849D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66439E82195B5F220080849D /* main.m */; };
 		66439E87195B5F220080849D /* MPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 66439E86195B5F220080849D /* MPAppDelegate.m */; };
-		66439E8A195B5F220080849D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66439E88195B5F220080849D /* Main.storyboard */; };
-		66439E8D195B5F220080849D /* MPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66439E8C195B5F220080849D /* MPViewController.m */; };
 		66439E8F195B5F220080849D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66439E8E195B5F220080849D /* Images.xcassets */; };
 		66439E96195B5F220080849D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66439E95195B5F220080849D /* XCTest.framework */; };
 		66439E97195B5F220080849D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66439E76195B5F220080849D /* Foundation.framework */; };
 		66439E98195B5F220080849D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66439E7A195B5F220080849D /* UIKit.framework */; };
 		66439EA0195B5F220080849D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66439E9E195B5F220080849D /* InfoPlist.strings */; };
 		66439EA2195B5F220080849D /* MLP_CCG_CounterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66439EA1195B5F220080849D /* MLP_CCG_CounterTests.m */; };
+		66439EAE195B5F630080849D /* MPCounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66439EAC195B5F630080849D /* MPCounterViewController.m */; };
+		66439EAF195B5F630080849D /* MPCounterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66439EAD195B5F630080849D /* MPCounterViewController.xib */; };
+		66439EB3195B5FCB0080849D /* MPPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66439EB1195B5FCB0080849D /* MPPlayerViewController.m */; };
+		66439EB4195B5FCB0080849D /* MPPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66439EB2195B5FCB0080849D /* MPPlayerViewController.xib */; };
+		66439EB7195B63780080849D /* MPScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 66439EB6195B63780080849D /* MPScore.m */; };
+		66439EBA195B65BF0080849D /* MPPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 66439EB9195B65BF0080849D /* MPPlayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,15 +48,22 @@
 		66439E84195B5F220080849D /* MLP CCG Counter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MLP CCG Counter-Prefix.pch"; sourceTree = "<group>"; };
 		66439E85195B5F220080849D /* MPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPAppDelegate.h; sourceTree = "<group>"; };
 		66439E86195B5F220080849D /* MPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPAppDelegate.m; sourceTree = "<group>"; };
-		66439E89195B5F220080849D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		66439E8B195B5F220080849D /* MPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPViewController.h; sourceTree = "<group>"; };
-		66439E8C195B5F220080849D /* MPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPViewController.m; sourceTree = "<group>"; };
 		66439E8E195B5F220080849D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		66439E94195B5F220080849D /* MLP CCG CounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MLP CCG CounterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66439E95195B5F220080849D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		66439E9D195B5F220080849D /* MLP CCG CounterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MLP CCG CounterTests-Info.plist"; sourceTree = "<group>"; };
 		66439E9F195B5F220080849D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		66439EA1195B5F220080849D /* MLP_CCG_CounterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLP_CCG_CounterTests.m; sourceTree = "<group>"; };
+		66439EAB195B5F630080849D /* MPCounterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCounterViewController.h; sourceTree = "<group>"; };
+		66439EAC195B5F630080849D /* MPCounterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCounterViewController.m; sourceTree = "<group>"; };
+		66439EAD195B5F630080849D /* MPCounterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPCounterViewController.xib; sourceTree = "<group>"; };
+		66439EB0195B5FCB0080849D /* MPPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPPlayerViewController.h; sourceTree = "<group>"; };
+		66439EB1195B5FCB0080849D /* MPPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPPlayerViewController.m; sourceTree = "<group>"; };
+		66439EB2195B5FCB0080849D /* MPPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPPlayerViewController.xib; sourceTree = "<group>"; };
+		66439EB5195B63780080849D /* MPScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPScore.h; sourceTree = "<group>"; };
+		66439EB6195B63780080849D /* MPScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPScore.m; sourceTree = "<group>"; };
+		66439EB8195B65BF0080849D /* MPPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPPlayer.h; sourceTree = "<group>"; };
+		66439EB9195B65BF0080849D /* MPPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPPlayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,11 +125,18 @@
 			children = (
 				66439E85195B5F220080849D /* MPAppDelegate.h */,
 				66439E86195B5F220080849D /* MPAppDelegate.m */,
-				66439E88195B5F220080849D /* Main.storyboard */,
-				66439E8B195B5F220080849D /* MPViewController.h */,
-				66439E8C195B5F220080849D /* MPViewController.m */,
 				66439E8E195B5F220080849D /* Images.xcassets */,
 				66439E7D195B5F220080849D /* Supporting Files */,
+				66439EAB195B5F630080849D /* MPCounterViewController.h */,
+				66439EAC195B5F630080849D /* MPCounterViewController.m */,
+				66439EAD195B5F630080849D /* MPCounterViewController.xib */,
+				66439EB0195B5FCB0080849D /* MPPlayerViewController.h */,
+				66439EB1195B5FCB0080849D /* MPPlayerViewController.m */,
+				66439EB2195B5FCB0080849D /* MPPlayerViewController.xib */,
+				66439EB5195B63780080849D /* MPScore.h */,
+				66439EB6195B63780080849D /* MPScore.m */,
+				66439EB8195B65BF0080849D /* MPPlayer.h */,
+				66439EB9195B65BF0080849D /* MPPlayer.m */,
 			);
 			path = "MLP CCG Counter";
 			sourceTree = "<group>";
@@ -229,9 +247,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66439EB4195B5FCB0080849D /* MPPlayerViewController.xib in Resources */,
 				66439E8F195B5F220080849D /* Images.xcassets in Resources */,
+				66439EAF195B5F630080849D /* MPCounterViewController.xib in Resources */,
 				66439E81195B5F220080849D /* InfoPlist.strings in Resources */,
-				66439E8A195B5F220080849D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,9 +269,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66439EB3195B5FCB0080849D /* MPPlayerViewController.m in Sources */,
 				66439E83195B5F220080849D /* main.m in Sources */,
-				66439E8D195B5F220080849D /* MPViewController.m in Sources */,
 				66439E87195B5F220080849D /* MPAppDelegate.m in Sources */,
+				66439EB7195B63780080849D /* MPScore.m in Sources */,
+				66439EAE195B5F630080849D /* MPCounterViewController.m in Sources */,
+				66439EBA195B65BF0080849D /* MPPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,14 +303,6 @@
 				66439E80195B5F220080849D /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		66439E88195B5F220080849D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				66439E89195B5F220080849D /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		66439E9E195B5F220080849D /* InfoPlist.strings */ = {
