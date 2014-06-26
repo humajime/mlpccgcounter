@@ -25,6 +25,8 @@
 		66439EB4195B5FCB0080849D /* MPPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66439EB2195B5FCB0080849D /* MPPlayerViewController.xib */; };
 		66439EB7195B63780080849D /* MPScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 66439EB6195B63780080849D /* MPScore.m */; };
 		66439EBA195B65BF0080849D /* MPPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 66439EB9195B65BF0080849D /* MPPlayer.m */; };
+		66ABCAEF195B8C41002BEE30 /* UIColor+Hexcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ABCAEE195B8C41002BEE30 /* UIColor+Hexcode.m */; };
+		66ABCAF2195B8CB0002BEE30 /* MPColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ABCAF1195B8CB0002BEE30 /* MPColors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		66439E73195B5F220080849D /* MLP CCG Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MLP CCG Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		66439E73195B5F220080849D /* MLP CC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MLP CC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66439E76195B5F220080849D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		66439E78195B5F220080849D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		66439E7A195B5F220080849D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -64,6 +66,10 @@
 		66439EB6195B63780080849D /* MPScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPScore.m; sourceTree = "<group>"; };
 		66439EB8195B65BF0080849D /* MPPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPPlayer.h; sourceTree = "<group>"; };
 		66439EB9195B65BF0080849D /* MPPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPPlayer.m; sourceTree = "<group>"; };
+		66ABCAED195B8C41002BEE30 /* UIColor+Hexcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hexcode.h"; sourceTree = "<group>"; };
+		66ABCAEE195B8C41002BEE30 /* UIColor+Hexcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hexcode.m"; sourceTree = "<group>"; };
+		66ABCAF0195B8CB0002BEE30 /* MPColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPColors.h; sourceTree = "<group>"; };
+		66ABCAF1195B8CB0002BEE30 /* MPColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPColors.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +109,7 @@
 		66439E74195B5F220080849D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				66439E73195B5F220080849D /* MLP CCG Counter.app */,
+				66439E73195B5F220080849D /* MLP CC.app */,
 				66439E94195B5F220080849D /* MLP CCG CounterTests.xctest */,
 			);
 			name = Products;
@@ -137,6 +143,10 @@
 				66439EB6195B63780080849D /* MPScore.m */,
 				66439EB8195B65BF0080849D /* MPPlayer.h */,
 				66439EB9195B65BF0080849D /* MPPlayer.m */,
+				66ABCAED195B8C41002BEE30 /* UIColor+Hexcode.h */,
+				66ABCAEE195B8C41002BEE30 /* UIColor+Hexcode.m */,
+				66ABCAF0195B8CB0002BEE30 /* MPColors.h */,
+				66ABCAF1195B8CB0002BEE30 /* MPColors.m */,
 			);
 			path = "MLP CCG Counter";
 			sourceTree = "<group>";
@@ -187,7 +197,7 @@
 			);
 			name = "MLP CCG Counter";
 			productName = "MLP CCG Counter";
-			productReference = 66439E73195B5F220080849D /* MLP CCG Counter.app */;
+			productReference = 66439E73195B5F220080849D /* MLP CC.app */;
 			productType = "com.apple.product-type.application";
 		};
 		66439E93195B5F220080849D /* MLP CCG CounterTests */ = {
@@ -273,8 +283,10 @@
 				66439E83195B5F220080849D /* main.m in Sources */,
 				66439E87195B5F220080849D /* MPAppDelegate.m in Sources */,
 				66439EB7195B63780080849D /* MPScore.m in Sources */,
+				66ABCAF2195B8CB0002BEE30 /* MPColors.m in Sources */,
 				66439EAE195B5F630080849D /* MPCounterViewController.m in Sources */,
 				66439EBA195B65BF0080849D /* MPPlayer.m in Sources */,
+				66ABCAEF195B8C41002BEE30 /* UIColor+Hexcode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,7 +406,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MLP CCG Counter/MLP CCG Counter-Prefix.pch";
 				INFOPLIST_FILE = "MLP CCG Counter/MLP CCG Counter-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "MLP CC";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -407,7 +419,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MLP CCG Counter/MLP CCG Counter-Prefix.pch";
 				INFOPLIST_FILE = "MLP CCG Counter/MLP CCG Counter-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "MLP CC";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -471,6 +483,7 @@
 				66439EA7195B5F220080849D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		66439EA8195B5F220080849D /* Build configuration list for PBXNativeTarget "MLP CCG CounterTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +492,7 @@
 				66439EAA195B5F220080849D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

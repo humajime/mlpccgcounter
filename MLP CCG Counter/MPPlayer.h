@@ -10,12 +10,20 @@
 
 @interface MPPlayer : NSObject
 
++(MPPlayer *) myPlayer;
++(MPPlayer *) theirPlayer;
++(int) highestScore;
+
 @property (readonly) int tokens;
+@property (readonly) BOOL hasTempTokens;
+@property (nonatomic) int score;
+@property BOOL isActivePlayer;
 
 -(void) incrementTokens:(int)amount;
 -(void) decrementTokens:(int)amount;
 -(void) incrementTempTokens:(int)amount;
 -(void) endOfTurn;
 -(void) startOfTurn;
+-(void) reset;
 
 @end

@@ -8,6 +8,7 @@
 
 #import "MPCounterViewController.h"
 #import "MPPlayerViewController.h"
+#import "MPPlayer.h"
 
 @interface MPCounterViewController ()
 
@@ -36,7 +37,10 @@
     // Do any additional setup after loading the view from its nib.
     
     self.you = [[MPPlayerViewController alloc] init];
+    self.you.player = [MPPlayer myPlayer];
+    
     self.them = [[MPPlayerViewController alloc] init];
+    self.them.player = [MPPlayer theirPlayer];
 
     self.you.view.frame = self.yourView.bounds;
     [self.yourView addSubview:self.you.view];
