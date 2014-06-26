@@ -9,8 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "MPPlayer.h"
 
+@protocol MPPlayerViewControllerDelegate <NSObject>
+
+-(void) backgroundDidChange:(UIColor *)color;
+
+@end
+
 @interface MPPlayerViewController : UIViewController
 
 @property (nonatomic, strong) MPPlayer *player;
+@property (nonatomic) id<MPPlayerViewControllerDelegate> delegate;
 
 @end

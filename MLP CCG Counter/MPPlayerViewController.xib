@@ -7,9 +7,13 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MPPlayerViewController">
             <connections>
                 <outlet property="actionTokenLabel" destination="qbJ-OY-e1s" id="waI-9j-MI8"/>
+                <outlet property="addATButton" destination="rsG-h2-t9Q" id="swl-hb-gVA"/>
+                <outlet property="addTempATButton" destination="bUp-Pb-jXY" id="BIN-Rn-gcg"/>
                 <outlet property="nextPonyButton" destination="HGi-rB-z2l" id="0mF-Cc-O0V"/>
+                <outlet property="removeATButton" destination="9F4-HA-cPJ" id="rqu-3j-gBy"/>
                 <outlet property="scoreBackground" destination="l3u-oT-69V" id="GAQ-xj-HOQ"/>
                 <outlet property="scoreLabel" destination="wAJ-I3-1eS" id="Bzi-hm-xom"/>
+                <outlet property="scorePicker" destination="c3a-FJ-2ZJ" id="8tU-j3-1IT"/>
                 <outlet property="tokenBackground" destination="U0R-5a-tLY" id="Xlh-TE-Dsr"/>
                 <outlet property="tokenCount" destination="DgA-Gz-qTy" id="UbM-cM-sY8"/>
                 <outlet property="turnButton" destination="ewe-oO-xgi" id="WIP-3I-dIw"/>
@@ -25,26 +29,28 @@
                     <rect key="frame" x="81" y="5" width="234" height="174"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DgA-Gz-qTy">
-                            <rect key="frame" x="64" y="68" width="107" height="69"/>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DgA-Gz-qTy">
+                            <rect key="frame" x="67" y="51" width="100" height="90"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="75"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rsG-h2-t9Q">
-                            <rect key="frame" x="116" y="34" width="98" height="64"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rsG-h2-t9Q">
+                            <rect key="frame" x="29" y="72" width="47" height="47"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="+ AT">
+                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="18"/>
+                            <state key="normal" title="+AT">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
                                 <action selector="addTokenPressed:" destination="-1" eventType="touchUpInside" id="hrr-Lm-bMD"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bUp-Pb-jXY">
-                            <rect key="frame" x="20" y="34" width="88" height="64"/>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bUp-Pb-jXY">
+                            <rect key="frame" x="9" y="34" width="88" height="47"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="18"/>
                             <state key="normal" title="+ TAT">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -52,10 +58,11 @@
                                 <action selector="addTempTokenPressed:" destination="-1" eventType="touchUpInside" id="izv-Ei-0jm"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9F4-HA-cPJ">
-                            <rect key="frame" x="116" y="106" width="98" height="64"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9F4-HA-cPJ">
+                            <rect key="frame" x="162" y="72" width="47" height="47"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="- AT">
+                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="18"/>
+                            <state key="normal" title="–AT">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
@@ -65,12 +72,13 @@
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action Tokens" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qbJ-OY-e1s">
                             <rect key="frame" x="11" y="11" width="108" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="15"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HGi-rB-z2l">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HGi-rB-z2l">
                             <rect key="frame" x="188" y="0.0" width="46" height="41"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="18"/>
                             <state key="normal" title=">">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -79,7 +87,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.73725490199999999" green="0.062745098040000002" blue="0.26169023720000001" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view contentMode="scaleToFill" id="l3u-oT-69V">
                     <rect key="frame" x="5" y="5" width="71" height="226"/>
@@ -96,15 +104,16 @@
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wAJ-I3-1eS">
                             <rect key="frame" x="13" y="10" width="45" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="15"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.73725490199999999" green="0.062745098040000002" blue="0.26169023720000001" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ewe-oO-xgi">
                     <rect key="frame" x="81" y="184" width="234" height="47"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="18"/>
                     <state key="normal" title="End Turn">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>

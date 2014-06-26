@@ -10,7 +10,7 @@
 #import "MPPlayerViewController.h"
 #import "MPPlayer.h"
 
-@interface MPCounterViewController ()
+@interface MPCounterViewController () <MPPlayerViewControllerDelegate>
 
 @property (strong) MPPlayerViewController *you;
 @property (strong) MPPlayerViewController *them;
@@ -40,6 +40,7 @@
     self.you.player = [MPPlayer myPlayer];
     
     self.them = [[MPPlayerViewController alloc] init];
+    self.them.delegate = self;
     self.them.player = [MPPlayer theirPlayer];
 
     self.you.view.frame = self.yourView.bounds;
@@ -54,6 +55,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void) backgroundDidChange:(UIColor *)color
+{
+    self.view.backgroundColor = color;
 }
 
 @end

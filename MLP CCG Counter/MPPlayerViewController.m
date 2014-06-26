@@ -20,6 +20,10 @@
 @property (strong, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (strong, nonatomic) IBOutlet UILabel *actionTokenLabel;
 @property (strong, nonatomic) IBOutlet UIButton *nextPonyButton;
+@property (strong, nonatomic) IBOutlet UIPickerView *scorePicker;
+@property (strong, nonatomic) IBOutlet UIButton *addTempATButton;
+@property (strong, nonatomic) IBOutlet UIButton *addATButton;
+@property (strong, nonatomic) IBOutlet UIButton *removeATButton;
 
 @property (nonatomic) int colorIndex;
 
@@ -62,6 +66,14 @@
     self.turnButton.layer.cornerRadius = 5;
     self.turnButton.layer.masksToBounds = YES;
     self.turnButton.layer.borderWidth = 2.0;
+    
+    self.addATButton.layer.cornerRadius = 5;
+    self.addATButton.layer.masksToBounds = YES;
+    self.addATButton.layer.borderWidth = 2.0;
+    
+    self.removeATButton.layer.cornerRadius = 5;
+    self.removeATButton.layer.masksToBounds = YES;
+    self.removeATButton.layer.borderWidth = 2.0;
 }
 
 -(void) viewWillAppear:(BOOL)animated
@@ -85,12 +97,29 @@
     return 16;
 }
 
+/*
 -(NSString *) pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     if(component == 0)
         return [NSString stringWithFormat:@"%d", row];
 //        return [NSString stringWithFormat:@"%d | %d", row, [MPScore tokensForScore:row]];
     return @"";
+}
+ */
+
+-(UIView *) pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
+{
+    UILabel *label = [[UILabel alloc] init];
+    label.text = [NSString stringWithFormat:@"%d", row];
+    label.font = [UIFont fontWithName:@"Verdana-Bold" size:30];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.textColor = [MPColors allColors][self.colorIndex][@"text"];
+    return label;
+}
+
+-(CGFloat) pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component
+{
+    return 40;
 }
 
 -(void) pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
@@ -147,6 +176,12 @@
     self.turnButton.backgroundColor = color[@"button"];
     self.turnButton.layer.borderColor = [((UIColor *)color[@"outline"]) CGColor];
     
+    self.addATButton.backgroundColor = color[@"button"];
+    self.addATButton.layer.borderColor = [((UIColor *)color[@"outline"]) CGColor];
+    
+    self.removeATButton.backgroundColor = color[@"button"];
+    self.removeATButton.layer.borderColor = [((UIColor *)color[@"outline"]) CGColor];
+    
     self.view.backgroundColor = color[@"hair"];
 
     self.scoreBackground.layer.borderColor = [((UIColor *)color[@"outline"]) CGColor];
@@ -170,6 +205,13 @@
         [self.turnButton setTitle:@"Start Turn" forState:UIControlStateNormal];
     else
         [self.turnButton setTitle:@"End Turn" forState:UIControlStateNormal];
+    
+    [self.nextPonyButton setTitleColor:color[@"button"] forState:UIControlStateNormal];
+    
+    [self.scorePicker reloadAllComponents];
+    
+    if(self.delegate)
+        [self.delegate backgroundDidChange:self.view.backgroundColor];
 }
 
 @end
