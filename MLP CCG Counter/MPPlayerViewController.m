@@ -74,6 +74,9 @@
     self.removeATButton.layer.cornerRadius = 5;
     self.removeATButton.layer.masksToBounds = YES;
     self.removeATButton.layer.borderWidth = 2.0;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerDidStart:) name:MPPlayerStartOfTurnNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerDidEnd:) name:MPPlayerEndOfTurnNotification object:nil];
 }
 
 -(void) viewWillAppear:(BOOL)animated
@@ -106,6 +109,20 @@
     return @"";
 }
  */
+
+-(void) playerDidStart:(NSNotification *)notif
+{
+    if(notif.object != self.player)
+        self.turnButton.enabled = NO;
+    [self updateViews];
+}
+
+-(void) playerDidEnd:(NSNotification *)notif
+{
+    if(notif.object != self.player)
+        self.turnButton.enabled = YES;
+    [self updateViews];
+}
 
 -(UIView *) pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
 {
@@ -173,7 +190,11 @@
 {
     NSDictionary *color = [MPColors allColors][self.colorIndex];
     
-    self.turnButton.backgroundColor = color[@"button"];
+    if(self.turnButton.enabled)
+        self.turnButton.backgroundColor = color[@"button"];
+    else
+        self.turnButton.backgroundColor = [UIColor grayColor];
+    
     self.turnButton.layer.borderColor = [((UIColor *)color[@"outline"]) CGColor];
     
     self.addATButton.backgroundColor = color[@"button"];

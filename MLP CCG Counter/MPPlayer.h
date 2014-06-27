@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+#define MPPlayerStartOfTurnNotification @"MPPlayerStartOfTurnNotification"
+#define MPPlayerEndOfTurnNotification @"MPPlayerEndOfTurnNotification"
+
 @interface MPPlayer : NSObject
 
 +(MPPlayer *) myPlayer;

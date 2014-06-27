@@ -96,11 +96,15 @@
 -(void) endOfTurn
 {
     self.tempTokens = 0;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:MPPlayerEndOfTurnNotification object:self];
 }
 
 -(void) startOfTurn
 {
     self.realTokens += [MPScore tokensForScore:[MPPlayer highestScore]];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:MPPlayerStartOfTurnNotification object:self];
 }
 
 @end
